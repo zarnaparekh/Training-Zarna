@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author Atwix Team
+ * @copyright Copyright (c) 2016 Atwix (https://www.atwix.com/)
+ * @package Atwix_Autologin
+ */
+?>
+<?php
+$autologinUsername = 'admin';
+$autologinPassword = 'admin@123';
+?>
+
+<?php if (!empty($autologinUsername) && !empty($autologinPassword) && !isset($_COOKIE['noautologin'])) : ?>
+    <h3 id="autologin-message" style="display: none"><?php echo __('Please wait. You will be logged in soon'); ?></h3>
+
+    <script>
+        require(["jquery", "Artera_Autologin/js/autologin"], function ($, autologin) {
+            autologin.adminAutologin('<?php echo $autologinUsername; ?>', '<?php echo $autologinPassword; ?>');
+        });
+    </script>
+<?php endif; ?>

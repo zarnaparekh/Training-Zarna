@@ -4,14 +4,14 @@ return [
         'frontName' => 'admin'
     ],
     'crypt' => [
-        'key' => 'a43b18ef43068c669a7010a65cabe6be'
+        'key' => 'e60da41a4494693bc3fe7141623f189e'
     ],
     'db' => [
         'table_prefix' => '',
         'connection' => [
             'default' => [
                 'host' => 'localhost',
-                'dbname' => 'magento',
+                'dbname' => 'magento_exercise',
                 'username' => 'root',
                 'password' => 'root',
                 'active' => '1'
@@ -24,17 +24,17 @@ return [
         ]
     ],
     'x-frame-options' => 'SAMEORIGIN',
-    'MAGE_MODE' => 'default',
+    'MAGE_MODE' => 'developer',
     'session' => [
         'save' => 'files'
     ],
     'cache' => [
         'frontend' => [
             'default' => [
-                'id_prefix' => '225_'
+                'id_prefix' => 'def_'
             ],
             'page_cache' => [
-                'id_prefix' => '225_'
+                'id_prefix' => 'def_'
             ]
         ]
     ],
@@ -66,6 +66,6 @@ return [
         'localhost'
     ],
     'install' => [
-        'date' => 'Mon, 21 Oct 2019 12:51:33 +0000'
+        'date' => 'Tue, 26 Nov 2019 09:42:11 +0000'
     ]
 ];

@@ -1,2 +1,0 @@
-# Training-Zarna
-magento training

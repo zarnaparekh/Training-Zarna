@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="example" engine="innodb" resource="default" charset="utf8"
+           collation="utf8_general_ci" comment="Example Table">
+        <column name="id" xsi:type="int" padding="11" unsigned="true" identity="true" comment="Example Id"
+                nullable="false" />
+        <column name="name" xsi:type="varchar" length="200" comment="Example Name" nullable="false" />
+
+        <column name="description" xsi:type="text" nullable="true" comment="Example Description" />
+
+
+        <column name="is_enabled" xsi:type="boolean" nullable="false" comment="Is Enabled" default="0" />
+
+        <column name="weighing_factor" xsi:type="decimal" precision="6" scale="3" nullable="false"
+                comment="Search Weighing Factor" default="1" unsigned="false" disabled="true"/>
+
+
+        <column name="created_at" xsi:type="timestamp" default="CURRENT_TIMESTAMP" />
+        <column name="updated_at" xsi:type="timestamp" default="CURRENT_TIMESTAMP"
+                on_update="true" nullable="true"/>
+
+        <column xsi:type="smallint" name="website_id" padding="5" unsigned="true" nullable="false"
+                identity="false" comment="Website Id"/>
+
+        <constraint xsi:type="foreign" referenceId="EXAMPLE_WEBSITE_ID_STORE_WEBSITE_WEBSITE_ID" column="website_id"
+        referenceTable="store_website" referenceColumn="website_id" onDelete="CASCADE" />
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id" />
+        </constraint>
+
+        <constraint xsi:type="unique" referenceId="EXAMPLE_NAME">
+            <column name="name" />
+        </constraint>
+    </table>
+</schema>

@@ -1,0 +1,23 @@
+{
+    "example": {
+        "column": {
+            "id": true,
+            "name": true,
+            "description": true,
+            "is_enabled": true,
+            "weighing_factor": true,
+            "created_at": true,
+            "updated_at": true,
+            "website_id": true,
+            "attribute": true,
+            "attributes": true,
+            "descriptions": true,
+            "description1": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "EXAMPLE_WEBSITE_ID_STORE_WEBSITE_WEBSITE_ID": true,
+            "EXAMPLE_NAME": true
+        }
+    }
+}

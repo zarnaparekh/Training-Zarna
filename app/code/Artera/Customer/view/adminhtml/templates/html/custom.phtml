@@ -1,0 +1,26 @@
+<?php
+$header_enable = $block->getValue();
+if ($header_enable) {
+    ?>
+<form action="<?php echo $block->getUrl('sales/order/getdata'); ?>" method="get">
+    <div class="get_data" style="display: flex;margin: 0px 82px;">
+        <div class="get_order_data" style="margin: 17px 0px;text-align: center;font-size: 16px;font-weight: 600;width: 33%;">
+            <label>Order</label>
+            <input type="text" name="get_order_data" id="get_order_data" />
+            <input type="submit" name="Submit" id="submit_order_data" class="action-primary"/>
+        </div>
+        <div class="get_product_data" style="margin: 17px 0px;text-align: center;font-size: 16px;font-weight: 600;width: 33%;">
+            <label>Product</label>
+            <input type="text" name="get_product_data" id="get_product_data" />
+            <input type="submit" name="Submit" id="submit_product_data" class="action-primary"/>
+        </div>
+        <div class="get_customer_data" style="margin: 17px 0px;text-align: center;font-size: 16px;font-weight: 600;width: 33%;">
+            <label>Customer</label>
+            <input type="text" name="get_customer_data" id="get_customer_data" />
+            <input type="submit" name="Submit" id="submit_customer_data" class="action-primary"/>
+        </div>
+    </div>
+</form>
+
+<?php
+} ?>
